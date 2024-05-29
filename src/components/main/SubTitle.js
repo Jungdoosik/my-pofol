@@ -10,11 +10,12 @@ const SubTitArea = styled.div`
   margin :0 5%;
 `;
 
-function SubTitle() {
+function SubTitle(props) {
+  console.log(props.subTitle)
   return (
     <SubTitArea>
       <SubTit>
-        {`Intro`}
+        {props.props.subTitle}
       </SubTit>
     </SubTitArea>
   )

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Contents from './Contents';
 import SubTitle from './SubTitle';
+import { useSelector } from "react-redux";
 
 const Tit = styled.h2`
   color : #778C86;
@@ -12,14 +13,22 @@ const TitArea = styled.div`
 `;
 
 function Title(props) {
-  console.log(props)
+  const subTitle = useSelector((state) => state.subTitleData);
   return (
     <TitArea>
       <Tit>{props.props.title}</Tit>
-      <SubTitle></SubTitle>
-      <Contents></Contents>
-      <SubTitle></SubTitle>
-      <Contents></Contents>
+      {
+        subTitle.map((ele, i) => {
+          if (props.props.sno === ele.titleSno) {
+            return (
+              <div>
+                <SubTitle props={ele} key={i}></SubTitle>
+                <Contents></Contents>
+              </div>
+            )
+          }
+        })
+      }
     </TitArea>
   )
 }

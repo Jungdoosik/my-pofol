@@ -1,10 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { configureStore } from '@reduxjs/toolkit';
-import dataReducer from './title.js'
+import titleReducer from './title.js'
+import subTitleReducer from './subTitle.js'
 
 export default configureStore({
   reducer: {
-    titleData: dataReducer
+    titleData: titleReducer,
+    subTitleData: subTitleReducer,
   }
 })

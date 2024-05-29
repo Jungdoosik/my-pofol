@@ -6,7 +6,7 @@ function Main() {
   return (
     <div>
       {
-        title.value.map((ele, i) => {
+        title.map((ele, i) => {
           return <Title props={ele} key={i}></Title>
         })
       }
