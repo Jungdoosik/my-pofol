@@ -12,9 +12,10 @@ const TitArea = styled.div`
 `;
 
 function Title(props) {
+  console.log(props)
   return (
     <TitArea>
-      <Tit>{props.emoji}{props.tit}</Tit>
+      <Tit>{props.props.title}</Tit>
       <SubTitle></SubTitle>
       <Contents></Contents>
       <SubTitle></SubTitle>
