@@ -20,10 +20,7 @@ function Contents(props) {
       <Content>
         <P>
           {
-            `
-              안녕하세요. 2년차 개발자 정두식입니다.
-              texttexttexttexttext
-            `
+            props.content
           }
         </P>
       </Content>

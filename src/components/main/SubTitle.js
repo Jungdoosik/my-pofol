@@ -15,7 +15,7 @@ function SubTitle(props) {
   return (
     <SubTitArea>
       <SubTit>
-        {props.props.subTitle}
+        {props.subTitle}
       </SubTit>
     </SubTitArea>
   )
