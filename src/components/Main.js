@@ -1,15 +1,9 @@
-import Title from "./main/Title";
-import { useSelector } from "react-redux";
+import AboutMeMain from "./main/aboutme/AboutMeMain";
 
 function Main() {
-  const title = useSelector((state) => state.titleData)
   return (
     <div>
-      {
-        title.map((ele, i) => {
-          return <Title props={ele} key={i}></Title>
-        })
-      }
+      <AboutMeMain></AboutMeMain>
     </div >
   )
 }

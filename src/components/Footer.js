@@ -6,7 +6,6 @@ const EmptyArea = styled.div`
 function Footer() {
   return (
     <EmptyArea>
-      수정 TEST2
     </EmptyArea>
   )
 }
