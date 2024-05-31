@@ -13,7 +13,7 @@ const Title = styled.h1`
 function AboutMeMain() {
   return (
     <Area>
-      <Title>🧑‍💻About Me</Title>
+      <Title>🧑‍💻About Me{'수정함'}</Title>
       <Profile></Profile>
       <Contact></Contact>
     </Area>
