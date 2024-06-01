@@ -2,6 +2,7 @@ import styled from "styled-components"
 import Contact from "./contact/Contact"
 import Profile from "./profile/Profile";
 import Education from "./education/Education";
+import Skills from "./skills/Skills";
 
 const Area = styled.div`
   margin : 0 3%;  
@@ -18,6 +19,7 @@ function AboutMeMain() {
       <Profile></Profile>
       <Contact></Contact>
       <Education></Education>
+      <Skills></Skills>
     </Area>
   )
 }

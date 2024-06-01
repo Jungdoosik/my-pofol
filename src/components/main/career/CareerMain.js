@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Project from "./project/Project";
 
 const Area = styled.div`
   margin : 0 3%;  
@@ -11,7 +12,8 @@ const Title = styled.h1`
 function CareerMain() {
   return (
     <Area>
-      <Title>🧑‍💻Career</Title>
+      <Title>✍️Career</Title>
+      <Project></Project>
     </Area>
   )
 }

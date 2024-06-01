@@ -28,7 +28,6 @@ const Detail = styled.a`
 function Contact() {
 
   const state = useSelector((state) => state.contact)
-  console.log(state)
   return (
     <Area>
       <H2>Contact</H2>

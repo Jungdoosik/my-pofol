@@ -4,10 +4,14 @@ import { configureStore } from '@reduxjs/toolkit';
 import contactReducer from './contact'
 import profileReducer from './profile'
 import educationReducer from './education';
+import skillsReducer from './skills';
+import projectReducer from './project'
 export default configureStore({
   reducer: {
     contact: contactReducer,
     profile: profileReducer,
     education: educationReducer,
+    skills: skillsReducer,
+    project: projectReducer,
   }
 })

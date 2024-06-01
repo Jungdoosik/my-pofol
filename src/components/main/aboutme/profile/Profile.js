@@ -36,7 +36,6 @@ const Detail = styled.span`
 function Profile() {
 
   const state = useSelector((state) => state.profile)
-  console.log(state)
   return (
     <Area>
       <H2>Profile</H2>
@@ -45,7 +44,7 @@ function Profile() {
         <Ul>
           {
             state.map((data, i) => (
-              <Li>
+              <Li key={i}>
                 <Title>{data.title}</Title>{"　:　"}<Detail>{data.detail}</Detail>
               </Li>
             ))

@@ -26,16 +26,8 @@ const Academy = styled.span`
   font-weight : bold;
 `;
 const Curriculum = styled.span`
-  color : #69737A;
   display : block;
   font-size : 15px;
-  font-weight : bold;
-`;
-
-const Detail = styled.a`
-  color : black;
-  font-weight: 400;
-  font-style: normal;
 `;
 
 function Education() {
@@ -46,7 +38,7 @@ function Education() {
       <H2>Education</H2>
       {
         state.map((data, i) => (
-          <ContentArea>
+          <ContentArea key={i}>
             <Date>{data.date}</Date>
             <Academy>{data.academy}</Academy>
             <Curriculum>- {data.curriculum}</Curriculum>
