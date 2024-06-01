@@ -6,13 +6,17 @@ export const projectData = createSlice({
     {
       date: "2022.05 ~ 2022.09",
       projectName: '삼성 welstory 임직원 쇼핑몰 리뉴얼',
-      detail: '배송관련 PC화면 개선 담당',
+      role: '배송관련 PC화면 개선 담당',
+      details: [
+        { detail: '배송 관련 추가 로직 개발 및 퍼블리싱' },
+        { detail: '장바구니 관련 api 개발' },
+      ],
       skills: [
-        { skill1: 'Vue.js' },
-        { skill2: 'Nuxt.js' },
-        { skill3: 'Javascript' },
-        { skill4: 'MySql' },
-        { skill5: 'Git' },
+        { skill: 'Vue.js' },
+        { skill: 'Nuxt.js' },
+        { skill: 'Javascript' },
+        { skill: 'MySql' },
+        { skill: 'Git' },
       ],
     }
   ],

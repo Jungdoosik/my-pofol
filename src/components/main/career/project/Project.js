@@ -15,15 +15,45 @@ const ContentArea = styled.div`
 
 const Ul = styled.ul`
   margin : 5px 0 ;
+  padding : 0;
 `;
 
 const Li = styled.li`
   list-style:none;
 `;
 
-const Title = styled.span`
+const ProjectName = styled.span`
   color : #69737A;
+  font-size : 20px;
   font-weight : bold;
+`;
+
+const Date = styled.span`
+  color : #a0a0a0;
+  display : block;
+  font-size : 13px;
+  font-weight : bold;
+  `;
+
+const Role = styled.p`
+
+`;
+
+const Detail = styled.div`
+
+`;
+
+const Skill = styled.div`
+  float: left;
+  border : 1px;
+  width : auto;
+  color : white;
+  text-align : center;
+  border-radius:2px;
+  background-color: #a0a0a0;
+  margin-right:2px;
+  margin-top: 15px;
+  padding : 0 5px;
 `;
 
 function Project() {
@@ -34,10 +64,28 @@ function Project() {
       <H2>Project</H2>
       {
         state.map((data, i) => (
-          <ContentArea>
+          <ContentArea key={i}>
+            <hr></hr>
             <Ul>
               <Li>
-                {data.date}
+                <Date>{data.date}</Date>
+                <ProjectName>{data.projectName}</ProjectName>
+                <Role>{data.role}</Role>
+                {
+                  data.details.map((e, j) => (
+                    <>
+                      <Detail> - {e.detail}</Detail>
+                    </>
+                  ))
+                }
+
+                {
+                  data.skills.map((e, j) => (
+                    <>
+                      <Skill>{e.skill}</Skill>
+                    </>
+                  ))
+                }
               </Li>
             </Ul>
           </ContentArea>
