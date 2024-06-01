@@ -36,7 +36,11 @@ function Contact() {
         state.map((data, i) => (
           <ContentArea key={i}>
             <Title>{data.title}</Title>{"　:　"}
-            <Detail href={data.title === "Email" ? "mailto:" + data.detail : data.detail} target='_blank'> {data.detail}</Detail>
+            <Detail
+              href={data.title === "Email" ? "mailto:" + data.detail : data.detail}
+              target={data.title === "Github" ? '_blank' : ""}>
+              {data.detail}
+            </Detail>
           </ContentArea>
         ))
       }

@@ -6,6 +6,7 @@ export const contactData = createSlice({
     [
       { title: "Email", detail: 'entlrsla@gmail.com' },
       { title: "Github", detail: 'https://github.com/Jungdoosik' },
+      { title: "Phone", detail: '010-6486-4033' },
     ]
   ,
   reducers: {

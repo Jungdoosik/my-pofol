@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Contact from "./contact/Contact"
 import Profile from "./profile/Profile";
+import Education from "./education/Education";
 
 const Area = styled.div`
   margin : 0 3%;  
@@ -13,9 +14,10 @@ const Title = styled.h1`
 function AboutMeMain() {
   return (
     <Area>
-      <Title>🧑‍💻About Me{'수정함'}</Title>
+      <Title>🧑‍💻About Me</Title>
       <Profile></Profile>
       <Contact></Contact>
+      <Education></Education>
     </Area>
   )
 }

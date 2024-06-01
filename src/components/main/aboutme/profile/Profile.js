@@ -16,6 +16,7 @@ const ContentArea = styled.div`
 
 const Ul = styled.ul`
   padding:  0;
+  margin : 0;
 `;
 
 const Li = styled.li`
