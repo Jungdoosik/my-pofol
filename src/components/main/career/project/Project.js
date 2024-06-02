@@ -22,7 +22,7 @@ const Li = styled.li`
   list-style:none;
 `;
 
-const ProjectName = styled.span`
+const ProjectName = styled.p`
   color : #69737A;
   font-size : 20px;
   font-weight : bold;
@@ -43,8 +43,10 @@ const Detail = styled.div`
 
 `;
 
+const SkillArea = styled.div`
+  display : flex;
+`;
 const Skill = styled.div`
-  float: left;
   border : 1px;
   width : auto;
   color : white;
@@ -54,6 +56,10 @@ const Skill = styled.div`
   margin-right:2px;
   margin-top: 15px;
   padding : 0 5px;
+`;
+
+const SiteArea = styled.a`
+  color: black;
 `;
 
 function Project() {
@@ -69,23 +75,34 @@ function Project() {
             <Ul>
               <Li>
                 <Date>{data.date}</Date>
+                <Date>{data.company}</Date>
                 <ProjectName>{data.projectName}</ProjectName>
+                <SiteArea href={data.site} target={'_blank'}>{data.site}</SiteArea>
                 <Role>{data.role}</Role>
                 {
                   data.details.map((e, j) => (
                     <>
-                      <Detail> - {e.detail}</Detail>
+                      <Detail>{e.detail}</Detail>
+                      {
+                        e.subDetails.map((s, k) => (
+                          <Ul>
+                            <Li>{s.subDetail}</Li>
+                          </Ul>
+                        ))
+                      }
                     </>
                   ))
                 }
 
-                {
-                  data.skills.map((e, j) => (
-                    <>
-                      <Skill>{e.skill}</Skill>
-                    </>
-                  ))
-                }
+                <SkillArea>
+                  {
+                    data.skills.map((e, j) => (
+                      <>
+                        <Skill>{e.skill}</Skill>
+                      </>
+                    ))
+                  }
+                </SkillArea>
               </Li>
             </Ul>
           </ContentArea>
