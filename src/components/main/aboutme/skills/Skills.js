@@ -27,7 +27,6 @@ const Title = styled.span`
 
 function Skills() {
   const state = useSelector((state) => state.skills);
-  console.log(state)
   return (
     <Area>
       <H2>Skills</H2>

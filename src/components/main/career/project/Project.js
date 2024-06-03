@@ -64,7 +64,6 @@ const SiteArea = styled.a`
 
 function Project() {
   const state = useSelector((state) => state.project);
-  console.log(state)
   return (
     <Area Area >
       <H2>Project</H2>

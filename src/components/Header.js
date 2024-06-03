@@ -1,23 +1,34 @@
 import styled from 'styled-components';
-import { useRef } from "react";
 
-const EmptyArea = styled.div`
-  height : 3em;
+const FixedArea = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 75px;
+  padding: 1rem;
+  color: white;
+  background: transparent;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
 `;
-function Header() {
-  const inputForm1 = useRef();
-  const inputForm2 = useRef();
-  const onMoveToForm1 = () => {
-    inputForm1.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-  const onMoveToForm2 = () => {
-    inputForm2.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+
+const Button = styled.button`
+  border: none;
+  font-size : 20px;
+  cursor: pointer;
+  background: transparent;
+  margin-right:5px;
+`;
+function Header(props) {
+  console.log(props)
   return (
-    <EmptyArea>
-      <button>about</button>
-      <button>career</button>
-    </EmptyArea>
+    <div>
+      <FixedArea>
+        <Button onClick={props.fn1}>AboutMe</Button>
+        <Button onClick={props.fn2}>Career</Button>
+      </FixedArea>
+    </div>
   )
 }
 
