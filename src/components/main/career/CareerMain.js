@@ -11,10 +11,12 @@ const Title = styled.h1`
 `;
 function CareerMain() {
   return (
-    <Area>
-      <Title>✍️Career</Title>
-      <Project></Project>
-    </Area>
+    <>
+      <Area>
+        <Title>✍️Career</Title>
+        <Project></Project>
+      </Area>
+    </>
   )
 }
 
