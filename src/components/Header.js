@@ -19,6 +19,7 @@ const Button = styled.button`
   cursor: pointer;
   background: transparent;
   margin-right:5px;
+  color
 `;
 function Header(props) {
   console.log(props)
