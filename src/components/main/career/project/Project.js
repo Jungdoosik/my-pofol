@@ -65,7 +65,7 @@ const SiteArea = styled.a`
 function Project() {
   const state = useSelector((state) => state.project);
   return (
-    <Area Area >
+    <Area>
       <H2>Project</H2>
       {
         state.map((data, i) => (

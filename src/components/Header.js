@@ -28,6 +28,7 @@ function Header(props) {
       <FixedArea>
         <Button onClick={props.fn1}>AboutMe</Button>
         <Button onClick={props.fn2}>Career</Button>
+        <Button onClick={props.fn3}>Study</Button>
       </FixedArea>
     </div>
   )

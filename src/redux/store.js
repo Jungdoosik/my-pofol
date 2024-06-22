@@ -6,6 +6,7 @@ import profileReducer from './profile'
 import educationReducer from './education';
 import skillsReducer from './skills';
 import projectReducer from './project'
+import personalReducer from './personal'
 export default configureStore({
   reducer: {
     contact: contactReducer,
@@ -13,5 +14,6 @@ export default configureStore({
     education: educationReducer,
     skills: skillsReducer,
     project: projectReducer,
+    personal: personalReducer,
   }
 })
